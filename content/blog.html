@@ -1,0 +1,71 @@
+    <section class="section page-intro">
+      <div class="container">
+        <span class="eyebrow">Stories &amp; updates</span>
+        <h1 class="h1">News &amp; blog</h1>
+        <p class="lede mt-2">Testimonies, church news, and short devotionals from the Crown of Glory family.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container two-col">
+        <div>
+          <!-- Temporary stock photos (Pexels) — swap for real church photos. -->
+          <article class="card" style="padding: 0; overflow: hidden;">
+            <img class="photo photo--wide" data-stock-photo="pexels" style="border-radius: 12px 12px 0 0; border-width: 0 0 1px;" src="/assets/images/blog-featured-lunch.jpg" alt="Photo from the Family Sunday lunch, tables full of church members eating and talking together" />
+            <div style="padding: var(--sp-3);">
+              <span class="eyebrow">Church news · 5 August 2026</span>
+              <h2 style="font-size: 26px;">What a full house at Family Sunday taught us about belonging</h2>
+              <p class="mt-2" style="color: var(--warm-grey);">We ran out of chairs before we ran out of food — and somehow that felt like exactly the right problem to have. Here's what happened when the whole church stayed for lunch.</p>
+              <a class="card__link mt-2" style="display:inline-block;" href="#">Read more →</a>
+            </div>
+          </article>
+
+          <div class="grid grid-3 mt-6">
+            <article class="card">
+              <img class="photo photo--wide" data-stock-photo="pexels" loading="lazy" src="/assets/images/blog-testimony.jpg" alt="Photo accompanying a testimony blog post about answered prayer" />
+              <span class="eyebrow">Testimony</span>
+              <h3>"I walked in a stranger and left with a family"</h3>
+              <p class="card__meta">29 July 2026</p>
+            </article>
+            <article class="card">
+              <img class="photo photo--wide" data-stock-photo="pexels" loading="lazy" src="/assets/images/blog-devotional.jpg" alt="Photo accompanying a devotional blog post about rest" />
+              <span class="eyebrow">Devotional</span>
+              <h3>Finding rest in a demanding week</h3>
+              <p class="card__meta">20 July 2026</p>
+            </article>
+            <article class="card">
+              <img class="photo photo--wide" data-stock-photo="pexels" loading="lazy" src="/assets/images/blog-church-news.jpg" alt="Photo accompanying a church news post about the building fund" />
+              <span class="eyebrow">Church news</span>
+              <h3>An update on our building fund journey</h3>
+              <p class="card__meta">12 July 2026</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- ============ Sidebar ============ -->
+        <aside aria-label="Blog sidebar">
+          <div class="sidebar-block card">
+            <h3>Categories</h3>
+            <ul class="stack mt-2">
+              <li><a class="card__link" href="#">Testimonies</a></li>
+              <li><a class="card__link" href="#">Church News</a></li>
+              <li><a class="card__link" href="#">Devotionals</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-block card card--parchment">
+            <h3>Stay in the loop</h3>
+            <p class="body-small mt-1">Get new posts and church news by email, roughly once a month.</p>
+            <form class="stack mt-2" data-validate novalidate>
+              <div class="form-status" role="status" aria-live="polite"></div>
+              <div class="field">
+                <label for="subscribe-email">Email address</label>
+                <input type="email" id="subscribe-email" name="email" required autocomplete="email" />
+                <span class="field-error">Please enter a valid email address.</span>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </section>

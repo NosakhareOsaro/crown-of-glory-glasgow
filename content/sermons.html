@@ -1,0 +1,115 @@
+    <section class="section page-intro">
+      <div class="container">
+        <span class="eyebrow">Watch &amp; listen</span>
+        <h1 class="h1">Sermon library</h1>
+        <p class="lede mt-2">Missed a Sunday, or want to hear it again? Every message is here, organised by series and date.</p>
+      </div>
+    </section>
+
+    <!-- ============ Filters ============ -->
+    <section class="container section--tight" style="padding-top: 0;">
+      <form class="filter-row" role="search" aria-label="Filter sermons">
+        <div class="field">
+          <label for="filter-series">Series</label>
+          <select id="filter-series" name="series">
+            <option value="">All series</option>
+            <option value="crowned">Crowned: Living as Royalty</option>
+            <option value="roots">Roots &amp; Fruit</option>
+            <option value="ordinary">Faith for the Ordinary Days</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="filter-date">Date</label>
+          <input type="month" id="filter-date" name="date" />
+        </div>
+        <div class="field">
+          <label for="filter-search">Search</label>
+          <input type="search" id="filter-search" name="search" placeholder="Search by title or speaker" />
+        </div>
+        <button class="btn btn-secondary" type="submit">Filter</button>
+      </form>
+    </section>
+
+    <!-- ============ Featured / latest sermon ============ -->
+    <section class="section">
+      <div class="container hero-grid">
+        <div class="placeholder placeholder--wide" role="img" aria-label="Video player placeholder for the latest Sunday sermon recording">
+          [ sermon video player — latest message ]
+        </div>
+        <div>
+          <span class="eyebrow">Latest message · Isaiah 62:3</span>
+          <h2>Crowned: Living as Royalty</h2>
+          <p class="lede mt-2">Pastor Emmanuel Okafor · Sunday, 9 August 2026</p>
+          <p class="mt-2" style="color: var(--warm-grey);">What does it mean to carry yourself as someone God has called royal — at work, at home, and in the ordinary middle of the week?</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#">Watch now</a>
+            <a class="btn btn-secondary" href="#">Listen (audio only)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Past messages ============ -->
+    <section class="section section--parchment">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Catch up</span>
+          <h2>Past messages</h2>
+        </div>
+        <!-- Temporary stock photos (Pexels) — swap for real sermon thumbnails. -->
+        <div class="grid grid-3">
+          <article class="card">
+            <img class="photo photo--wide" data-stock-photo="pexels" loading="lazy" src="/assets/images/sermon-thumb-a.jpg" alt="Thumbnail for sermon: Roots and Fruit, part 3" />
+            <h3>Roots &amp; Fruit (Part 3)</h3>
+            <p class="card__meta">2 August 2026</p>
+          </article>
+          <article class="card">
+            <img class="photo photo--wide" data-stock-photo="pexels" loading="lazy" src="/assets/images/sermon-thumb-b.jpg" alt="Thumbnail for sermon: Roots and Fruit, part 2" />
+            <h3>Roots &amp; Fruit (Part 2)</h3>
+            <p class="card__meta">26 July 2026</p>
+          </article>
+          <article class="card">
+            <img class="photo photo--wide" data-stock-photo="pexels" loading="lazy" src="/assets/images/sermon-thumb-c.jpg" alt="Thumbnail for sermon: Roots and Fruit, part 1" />
+            <h3>Roots &amp; Fruit (Part 1)</h3>
+            <p class="card__meta">19 July 2026</p>
+          </article>
+          <article class="card">
+            <img class="photo photo--wide" data-stock-photo="pexels" loading="lazy" src="/assets/images/sermon-thumb-a.jpg" alt="Thumbnail for sermon: Faith for the Ordinary Days, part 4" />
+            <h3>Faith for the Ordinary Days (Part 4)</h3>
+            <p class="card__meta">12 July 2026</p>
+          </article>
+          <article class="card">
+            <img class="photo photo--wide" data-stock-photo="pexels" loading="lazy" src="/assets/images/sermon-thumb-b.jpg" alt="Thumbnail for sermon: Faith for the Ordinary Days, part 3" />
+            <h3>Faith for the Ordinary Days (Part 3)</h3>
+            <p class="card__meta">5 July 2026</p>
+          </article>
+          <article class="card">
+            <img class="photo photo--wide" data-stock-photo="pexels" loading="lazy" src="/assets/images/sermon-thumb-c.jpg" alt="Thumbnail for sermon: Faith for the Ordinary Days, part 2" />
+            <h3>Faith for the Ordinary Days (Part 2)</h3>
+            <p class="card__meta">28 June 2026</p>
+          </article>
+        </div>
+
+        <nav class="pagination" aria-label="Sermon pages">
+          <a href="#" aria-label="Previous page">‹</a>
+          <a href="#" aria-current="page">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#" aria-label="Next page">›</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="feature-band section">
+      <div class="container feature-band-inner">
+        <span class="feature-band__icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="9"/><path d="M10 9l5 3-5 3Z" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <div class="feature-band__text">
+          <span class="eyebrow">Every Sunday, 10:30am</span>
+          <h2>Can't make it in person? Watch live</h2>
+          <p>We stream every Sunday service, wherever you are.</p>
+        </div>
+        <a class="btn btn-onpurple" href="#">Watch live</a>
+      </div>
+    </section>

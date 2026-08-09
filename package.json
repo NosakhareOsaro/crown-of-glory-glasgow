@@ -1,0 +1,11 @@
+{
+  "name": "crown-of-glory-glasgow",
+  "private": true,
+  "version": "1.0.0",
+  "description": "RCCG Crown of Glory Glasgow — static site (Royal Warmth brand system)",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "npx --yes serve dist -p 8080",
+    "start": "npm run build && npm run serve"
+  }
+}
