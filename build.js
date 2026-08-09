@@ -290,17 +290,24 @@ function footer(base) {
 /* Layout                                                               */
 /* ------------------------------------------------------------------ */
 
-// Content fragments in /content author their internal links as root-absolute
-// ("/about/", "/give/", "/", …) because that's the readable form to write by
-// hand. Rewrite those into the same page-relative, index.html-suffixed form
-// the header/footer use, so the built page works under file:// too. Anchors
-// (#faq), external links (http…), and form actions (action="/api/…") are left
-// untouched — only bare href="/slug/" style attributes are root-absolute.
+// Content fragments in /content author their internal links AND image paths
+// as root-absolute ("/about/", "/assets/images/x.jpg", "/") because that's
+// the readable form to write by hand. Rewrite those into page-relative form
+// so the built page works under file://, and — just as importantly — under
+// any subpath deployment (e.g. GitHub Pages project sites, which serve from
+// /repo-name/ rather than /). A root-absolute src="/assets/…" silently
+// resolves to the wrong host-root URL in that case; only base+"assets/…"
+// resolves correctly regardless of what path prefix the site is served
+// under. Anchors (#faq), external links (http…), and form actions
+// (action="/api/…") are left untouched.
 function rewriteContentLinks(html, base) {
   const knownSlugs = new Set(pages.map((p) => p.slug).filter(Boolean));
-  return html.replace(/href="\/([a-z0-9-]*)\/?"/g, (match, slug) => {
+  const withPageLinks = html.replace(/href="\/([a-z0-9-]*)\/?"/g, (match, slug) => {
     if (slug !== "" && !knownSlugs.has(slug)) return match; // not a page link — leave as-is
     return `href="${pageHref(base, slug)}"`;
+  });
+  return withPageLinks.replace(/src="\/assets\/([^"]+)"/g, (match, assetPath) => {
+    return `src="${base}assets/${assetPath}"`;
   });
 }
 
